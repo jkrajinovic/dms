@@ -1,5 +1,6 @@
 <script>
-  import DisasterGlobal from "./components/partials/disaster-global/disaster-global.component.svelte";
+  import DisasterGlobal from "./components/widgets/disaster-global/disaster-global.component.svelte";
+  import DisasterLocal from "./components/widgets/disaster-local/disaster-local.component.svelte";
   import Footer from "./components/partials/footer/footer.component.svelte";
   import Header from "./components/partials/header/header.component.svelte";
   import UserInfo from "./components/partials/user-info/user-info.component.svelte";
@@ -61,7 +62,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-
+      <DisasterLocal />
       <DisasterGlobal />
     </div>
     <div class="col-md-6">
