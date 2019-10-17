@@ -2,9 +2,10 @@
 
 ---
 
-# Weather Vakula
+# DMS - Disaser management system
 
-//weather forcast is pulled from this link not Vakula him self
+
+![alt text](https://github.com/jkrajinovic/dms/blob/master/public/images/disaster-management-system.jpg)
 https://weatherstack.com/ 
 
 This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
