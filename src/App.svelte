@@ -7,6 +7,10 @@
   import UserMessages from "./components/partials/user-messages/user-messages.component.svelte";
   import PanicButton from "./components/partials/panic-button/panic-button.component.svelte";
 
+  import { appModeService } from "./services/app-mode/app-mode.service.js";
+
+  import { AppMode } from "./domain/models/app-mode.js";
+
   export let widgetName = "Vakula";
   export let myLocation = {
     coords: {}
@@ -17,7 +21,6 @@
   function getLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(position => {
-        console.log("position", position);
         myLocation.coords = position.coords;
       });
     } else {
@@ -26,6 +29,8 @@
   }
 
   getLocation();
+
+  const stores = appModeService.getAppMode();
 </script>
 
 <style>
@@ -59,22 +64,35 @@
 
 <section class="section main-section" />
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <DisasterLocal />
-      <DisasterGlobal />
-    </div>
-    <div class="col-md-6">
-      <PanicButton />
-      <UserMessages />
-      <UserInfo />
-      <ul>
-        <li>{myLocation.coords.latitude}</li>
-        <li>{myLocation.coords.longitude}</li>
-      </ul>
+{#if $stores.state === AppMode.MODE_PANIC}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p>{$stores.state}</p>
+        Your are now in panic mode!!! Is your lady maybe near by?
+      </div>
     </div>
   </div>
-</div>
+{/if}
+
+{#if $stores.state === AppMode.MODE_NORMAL}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <DisasterLocal />
+        <DisasterGlobal />
+      </div>
+      <div class="col-md-6">
+        <PanicButton />
+        <UserMessages />
+        <UserInfo />
+        <ul>
+          <li>{myLocation.coords.latitude}</li>
+          <li>{myLocation.coords.longitude}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+{/if}
 
 <Footer />
