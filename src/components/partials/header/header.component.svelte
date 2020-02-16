@@ -1,6 +1,6 @@
 <header class="section header-section">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">DMS</a>
+    <a class="navbar-brand" href="http://test.com">DMS sisters</a>
 
     <button
       class="navbar-toggler"
@@ -16,18 +16,18 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="http://test.com">
             Home
             <span class="sr-only">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="http://test.com">Link</a>
         </li>
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
-            href="#"
+            href="http://test.com"
             id="navbarDropdown"
             role="button"
             data-toggle="dropdown"
@@ -36,14 +36,14 @@
             Dropdown
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="http://test.com">Action</a>
+            <a class="dropdown-item" href="http://test.com">Another action</a>
             <div class="dropdown-divider" />
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="http://test.com">Something else here</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
+          <a class="nav-link disabled" href="http://test.com">Disabled</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
